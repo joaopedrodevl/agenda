@@ -37,7 +37,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json()); 
 app.use(express.static(path.resolve(__dirname, 'public'))); 
 
-// app.use(helmet());
+app.use(helmet());
 
 app.use(sessionOptions);
 app.use(flash()); 
