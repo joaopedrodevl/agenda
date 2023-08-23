@@ -8,8 +8,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "dev-server": "nodemon server.js --ignore public --ignore frontend",
+    "start": "node index.js",
+    "dev-server": "nodemon index.js --ignore public --ignore frontend",
     "dev": "webpack -w"
   },
   "keywords": [],
