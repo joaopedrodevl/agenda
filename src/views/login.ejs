@@ -11,12 +11,14 @@
 
       <%- include('./includes/messages') %>
 
+      <div id="div-login"></div>
+
       <div class="row">
         <div class="col-lg">
           <h4 class="text-center">Faça seu cadastro</h4>
           <p class="text-center">Se você ainda não tem conta, crie uma.</p>
 
-          <form action="/login/register" method="post">
+          <form action="/login/register" method="post" id="form-register">
             <input type="hidden" name="_csrf" value="<%= csrfToken %>">
             <div class="mb-3">
               <label for="email" class="form-label">Email</label>
@@ -35,15 +37,15 @@
 
           <p class="text-center">Se já tem uma conta, entre com ela.</p>
 
-          <form action="/login/entrar" method="post">
+          <form action="/login/entrar" method="post" id="form-login">
             <input type="hidden" name="_csrf" value="<%= csrfToken %>">
             <div class="mb-3">
               <label for="email" class="form-label">Email</label>
-              <input type="email" class="form-control" id="email" aria-describedby="email" name="email">
+              <input type="email" class="form-control" id="email-l" aria-describedby="email" name="email">
             </div>
             <div class="mb-3">
               <label for="password" class="form-label">Password</label>
-              <input type="password" class="form-control" id="password" name="password">
+              <input type="password" class="form-control" id="password-l" name="password">
             </div>
             <button type="submit" class="btn btn-primary">Entrar</button>
           </form>
